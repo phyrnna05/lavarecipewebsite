@@ -16,7 +16,7 @@ EXPOSE 8080
 
 # Set environment variable to allow Vite dev server to work in Docker
 ENV HOST=0.0.0.0
-ENV VITE_PORT=8080  # Set Vite to run on port 8080
+ENV VITE_PORT=8080
 
 # Run the dev server
 CMD ["npm", "run", "dev"]
