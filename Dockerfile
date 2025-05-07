@@ -11,11 +11,12 @@ RUN npm install
 # Copy the rest of your app's code
 COPY . .
 
-# Expose the default Vite dev server port
-EXPOSE 5173
+# Expose port 8080 instead of 5173
+EXPOSE 8080
 
 # Set environment variable to allow Vite dev server to work in Docker
 ENV HOST=0.0.0.0
+ENV VITE_PORT=8080  # Set Vite to run on port 8080
 
 # Run the dev server
 CMD ["npm", "run", "dev"]
